@@ -19,6 +19,9 @@ public class Main {
     static String loginName = "";
     static bot opponent = new bot();
     static int currentHarga;
+
+    static int bot_harga;
+    static int user_harga;
     /*VAR*/
 
     public static void main(String[] args) {
@@ -43,9 +46,7 @@ public class Main {
 
             lelangStart();
         }
-
-        //lelangStart();
-
+        pemenang();
     }
 
     static boolean UserAnswerIsYes(String input){
@@ -106,13 +107,14 @@ public class Main {
                 System.out.println("harga anda terlalu rendah");
             }else {
                 barangLelang.addHargaTawar(harga);
+                user_harga = harga;
             }
             //System.out.println();//jarak
 
             currentHarga = barangLelang.getHargaTertinggi();
 
             //bot turn
-            int bot_harga = opponent.generateHarga(currentHarga);
+            bot_harga = opponent.generateHarga(currentHarga);
             if (bot_harga <= barangLelang.getHargaTertinggi()){
                 System.out.println("Bot :  skip dlu");
             }else {
@@ -127,7 +129,6 @@ public class Main {
 
         } while (UserAnswerIsYes(jawab));
     }
-
 
     static void generatebarang() {
         barangLelang.addNamaBarang("Sabun wangy wangy");
@@ -144,5 +145,17 @@ public class Main {
         barangLelang.addHargaAwal("200000");
         barangLelang.addHargaTawar(200000);
         barangLelang.setStatus(true);
+    }
+
+    static void pemenang(){
+        if (currentHarga == user_harga){
+            System.out.println("Pemenang " + barangLelang.getNamaBarang(Pilihan));
+            System.out.println("Adalah : " + loginName);
+            System.out.println("Dengan harga : " + currentHarga);
+        }else {
+            System.out.println("Pemenang : " + barangLelang.getNamaBarang(Pilihan));
+            System.out.println("Adalah : BOT");
+            System.out.println("Dengan harga : " + currentHarga);
+        }
     }
 }
