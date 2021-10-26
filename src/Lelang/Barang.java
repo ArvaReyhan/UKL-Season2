@@ -46,7 +46,9 @@ public class Barang extends Lelang {
         this.hargaAwal.add(harga);
         this.addHargaTawar(Integer.parseInt(harga));
     }
-
+    public void setStatus(int index, boolean status){
+        Status.add(index, status);
+    }
     public int getIdMasyarakat() {
         int index = input.nextInt();
         return idMasyarakat.get(index);

@@ -149,6 +149,7 @@ public class Main {
     }
 
     static void pemenang(){
+        barangLelang.setStatus(Pilihan, false);
         if (currentHarga == user_harga){
             System.out.println("Pemenang " + barangLelang.getNamaBarang(Pilihan));
             System.out.println("Adalah : " + loginName);
