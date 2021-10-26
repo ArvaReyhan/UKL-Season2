@@ -9,7 +9,11 @@ public class Petugas extends User{
     private ArrayList<String> telepon = new ArrayList<String>();
 
     public void doYourJob(Barang barang){
+        System.out.print("Nama Barang : ");
         barang.addNamaBarang();
+        System.out.print("Harga Awal Barang : ");
+        barang.addHargaAwal();;
+        barang.setStatus(true);
     }
 
     public Petugas(String nama, String alamat, String telp){

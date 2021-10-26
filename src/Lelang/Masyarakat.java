@@ -7,7 +7,7 @@ public class Masyarakat extends User{
     private ArrayList<String> alamat = new ArrayList<String>();
     private ArrayList<String> telepon = new ArrayList<String>();
 
-    public void addMasyarakat(String nama, String alamat, String telp){
+    public void Masyarakat(String nama, String alamat, String telp){
         setNama(nama);
         setAlamat(alamat);
         setTelepon(telp);
