@@ -121,6 +121,7 @@ public class Main {
                 barangLelang.addHargaTawar(bot_harga);
                 System.out.println("Bot : " + bot_harga);
             }
+            currentHarga = barangLelang.getHargaTertinggi();
             System.out.println();//jarak
             /*logic here*/
 
@@ -153,7 +154,7 @@ public class Main {
             System.out.println("Adalah : " + loginName);
             System.out.println("Dengan harga : " + currentHarga);
         }else {
-            System.out.println("Pemenang : " + barangLelang.getNamaBarang(Pilihan));
+            System.out.println("Pemenang " + barangLelang.getNamaBarang(Pilihan));
             System.out.println("Adalah : BOT");
             System.out.println("Dengan harga : " + currentHarga);
         }
