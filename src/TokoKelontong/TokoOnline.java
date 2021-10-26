@@ -13,6 +13,7 @@ public class TokoOnline {
         laporan.Laporan(transaksi, barang);
 
         System.out.println();
+
         transaksi.prosesTransaksi(orang, transaksi, barang);
         laporan.Laporan(orang);
         laporan.Laporan(barang);
