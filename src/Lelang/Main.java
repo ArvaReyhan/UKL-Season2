@@ -4,6 +4,7 @@ package Lelang;
 import java.util.Scanner;
 
 public class Main {
+    /*VAR*/
     static Masyarakat masyarakat = new Masyarakat();
     static Barang barangLelang = new Barang();
     static Petugas petugas = new Petugas("Anonimus", "jalan jalan", "08123425624");
@@ -13,6 +14,12 @@ public class Main {
 
     static String jawab = "";
     static String user_input = "";
+    static int Pilihan;
+
+    static String loginName = "";
+    static bot opponent = new bot();
+    static int currentHarga;
+    /*VAR*/
 
     public static void main(String[] args) {
         login();
@@ -23,14 +30,21 @@ public class Main {
         barangLelang.tampilBarang();
 
         System.out.print("barang mana yang ingin anda tawar ? : ");
-        int Pilihan = userInput.nextInt();
+        Pilihan = userInput.nextInt();
         if (Pilihan > barangLelang.idBarang.size() || !barangLelang.getStatus(Pilihan)){
             System.out.println("nomor barang tidak valid");
         }else{
             System.out.println("Barang : " + barangLelang.getNamaBarang(Pilihan));
             System.out.println("harga awal : " + barangLelang.getHargaAwal(Pilihan));
             System.out.println("Status : " + barangLelang.getStatus(Pilihan));
+            barangLelang.addPenawar(masyarakat.getIdMasyarakat(masyarakat.getIndexFromName(loginName)));
+            barangLelang.overrideHargaTawar();
+            barangLelang.addHargaTawar(Integer.parseInt(barangLelang.getHargaAwal(Pilihan)));
+
+            lelangStart();
         }
+
+        //lelangStart();
 
     }
 
@@ -39,8 +53,10 @@ public class Main {
     }
 
     static void login(){
+        System.out.println("++ LOGIN ++");
         System.out.print("Nama : ");
         String nama = userInput.nextLine();
+        loginName = nama;
         System.out.print("Alamat : ");
         String alamat = userInput.nextLine();
         System.out.print("telp : ");
@@ -75,8 +91,35 @@ public class Main {
 
     static void lelangStart() {
         do {
-            /*logic here*/
 
+            /*logic here*/
+            //our turn
+            currentHarga = barangLelang.getHargaTertinggi();
+            System.out.println("harga Saat Ini : " + currentHarga);
+            System.out.println();//jarak
+            System.out.print("Masukkan Harga : ");
+            int harga = userInput.nextInt();
+
+            System.out.println();//jarak
+
+            if (harga <= barangLelang.getHargaTertinggi()){
+                System.out.println("harga anda terlalu rendah");
+            }else {
+                barangLelang.addHargaTawar(harga);
+            }
+            //System.out.println();//jarak
+
+            currentHarga = barangLelang.getHargaTertinggi();
+
+            //bot turn
+            int bot_harga = opponent.generateHarga(currentHarga);
+            if (bot_harga <= barangLelang.getHargaTertinggi()){
+                System.out.println("Bot :  skip dlu");
+            }else {
+                barangLelang.addHargaTawar(bot_harga);
+                System.out.println("Bot : " + bot_harga);
+            }
+            System.out.println();//jarak
             /*logic here*/
 
             System.out.print("apakah anda ingin menawar lagi ? (Y/T) : ");

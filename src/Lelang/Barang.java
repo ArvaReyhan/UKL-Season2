@@ -1,6 +1,8 @@
 package Lelang;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Barang extends Lelang {
@@ -13,6 +15,15 @@ public class Barang extends Lelang {
 
     public int getIdMasyarakat(int index) {
         return idMasyarakat.get(index);
+    }
+
+    void overrideHargaTawar(){
+        this.hargaTawar.clear();
+    }
+
+    @Override
+    public int getHargaTertinggi() {
+        return Collections.max(hargaTawar);
     }
 
     public void addIdMasyarakat(int ID) {

@@ -7,7 +7,8 @@ public class bot {
         Random rand = new Random();
         int lelang = rand.nextInt(2);
         if(lelang != 1){
-            return rand.nextInt(hargaSebelum) + hargaSebelum;
+            int hargaBot = rand.nextInt(hargaSebelum) + hargaSebelum;
+            return hargaBot;
         }else{
             return 0;
         }

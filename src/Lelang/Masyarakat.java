@@ -15,6 +15,9 @@ public class Masyarakat extends User{
         setIdMasyarakat(namaMasyarakat.indexOf(nama));
     }
 
+    public int getIndexFromName(String nama){
+        return namaMasyarakat.indexOf(nama);
+    }
     public int getIdMasyarakat(int id) {
         return idMasyarakat.get(id);
     }
