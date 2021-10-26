@@ -3,7 +3,7 @@ package Lelang;
 import java.util.ArrayList;
 
 public class Lelang implements mengLelang{
-    private boolean Status = true;
+    ArrayList<Boolean> Status = new ArrayList<Boolean>();
     ArrayList<Integer> idPenawar = new ArrayList<>();
     ArrayList<Integer> idBarang = new ArrayList<>();
     ArrayList<Integer> hargaTawar = new ArrayList<>();
@@ -26,7 +26,7 @@ public class Lelang implements mengLelang{
 
     @Override
     public void setStatus(boolean status) {
-        this.Status = status;
+        this.Status.add(status);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Lelang implements mengLelang{
     }
 
     @Override
-    public boolean getStatus() {
-        return Status;
+    public boolean getStatus(int id) {
+        return this.Status.get(id);
     }
 }

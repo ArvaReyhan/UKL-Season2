@@ -1,8 +1,11 @@
 package Lelang;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Barang extends Lelang {
+    Scanner input = new Scanner(System.in);
+
     private ArrayList<Integer> idMasyarakat = new ArrayList<Integer>();
     private ArrayList<String> namaBarang = new ArrayList<String>();
     private ArrayList<String> hargaAwal = new ArrayList<String>();
@@ -29,5 +32,47 @@ public class Barang extends Lelang {
 
     public void addHargaAwal(String harga) {
         this.hargaAwal.add(harga);
+    }
+
+    public int getIdMasyarakat() {
+        int index = input.nextInt();
+        return idMasyarakat.get(index);
+    }
+
+    public void addIdMasyarakat() {
+        int ID = input.nextInt();
+        this.idMasyarakat.add(ID);
+    }
+
+    public String getNamaBarang() {
+        int index = input.nextInt();
+        return namaBarang.get(index);
+    }
+
+    public void addNamaBarang() {
+        String nama = input.nextLine();
+        this.namaBarang.add(nama);
+    }
+
+    public int getHargaAwal() {
+        int index = input.nextInt();
+        return Integer.parseInt(hargaAwal.get(index));
+    }
+
+    public void addHargaAwal() {
+        String harga = input.nextLine();
+        this.hargaAwal.add(harga);
+    }
+
+    public void tampilBarang(){
+        int i, n = namaBarang.size();
+        for (i=0; i<n; i++){
+            System.out.println("+-------------+");
+            System.out.println("Nama Barang : " +getNamaBarang(i));
+            System.out.println("Harga awal : "+getHargaAwal(i));
+            System.out.println("Dapat dilelang? : "+getStatus(i));
+            System.out.println("+-------------+");
+            System.out.println();
+        }
     }
 }

@@ -8,9 +8,11 @@ public class Petugas extends User{
     private ArrayList<String> alamat = new ArrayList<String>();
     private ArrayList<String> telepon = new ArrayList<String>();
 
+    public void doYourJob(Barang barang){
+        barang.addNamaBarang();
+    }
 
-
-    public void addPetugas(String nama, String alamat, String telp){
+    public Petugas(String nama, String alamat, String telp){
         setNama(nama);
         setAlamat(alamat);
         setTelepon(telp);

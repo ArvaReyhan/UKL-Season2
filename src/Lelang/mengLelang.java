@@ -11,5 +11,5 @@ public interface mengLelang {
 
     int getHargaTertinggi();
     int getIdPenawar();
-    boolean getStatus();
+    boolean getStatus(int id);
 }
