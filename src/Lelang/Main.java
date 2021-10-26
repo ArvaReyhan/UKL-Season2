@@ -1,5 +1,6 @@
 package Lelang;
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +18,20 @@ public class Main {
         login();
         askGeneratebarang();
         askAjukanBarang();
+        System.out.println("Daftar barang");
+        System.out.println();//jarak
+        barangLelang.tampilBarang();
+
+        System.out.print("barang mana yang ingin anda tawar ? : ");
+        int Pilihan = userInput.nextInt();
+        if (Pilihan > barangLelang.idBarang.size() || !barangLelang.getStatus(Pilihan)){
+            System.out.println("nomor barang tidak valid");
+        }else{
+            System.out.println("Barang : " + barangLelang.getNamaBarang(Pilihan));
+            System.out.println("harga awal : " + barangLelang.getHargaAwal(Pilihan));
+            System.out.println("Status : " + barangLelang.getStatus(Pilihan));
+        }
+
     }
 
     static boolean UserAnswerIsYes(String input){
@@ -32,6 +47,7 @@ public class Main {
         String telp = userInput.nextLine();
         masyarakat.Masyarakat(nama, alamat, telp);
     }
+
     static void askGeneratebarang(){
         //ask for generate
         System.out.print("Generate Barang ? (y/n) : ");
@@ -73,14 +89,17 @@ public class Main {
     static void generatebarang() {
         barangLelang.addNamaBarang("Sabun wangy wangy");
         barangLelang.addHargaAwal("10000");
+        barangLelang.addHargaTawar(10000);
         barangLelang.setStatus(true);
 
         barangLelang.addNamaBarang("Artefak");
         barangLelang.addHargaAwal("400000");
+        barangLelang.addHargaTawar(400000);
         barangLelang.setStatus(true);
 
         barangLelang.addNamaBarang("keyboard");
         barangLelang.addHargaAwal("200000");
+        barangLelang.addHargaTawar(200000);
         barangLelang.setStatus(true);
     }
 }

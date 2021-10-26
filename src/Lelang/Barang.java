@@ -10,6 +10,7 @@ public class Barang extends Lelang {
     private ArrayList<String> namaBarang = new ArrayList<String>();
     private ArrayList<String> hargaAwal = new ArrayList<String>();
 
+
     public int getIdMasyarakat(int index) {
         return idMasyarakat.get(index);
     }
@@ -32,6 +33,7 @@ public class Barang extends Lelang {
 
     public void addHargaAwal(String harga) {
         this.hargaAwal.add(harga);
+        this.addHargaTawar(Integer.parseInt(harga));
     }
 
     public int getIdMasyarakat() {
@@ -64,10 +66,17 @@ public class Barang extends Lelang {
         this.hargaAwal.add(harga);
     }
 
+    @Override
+    public void addIdBarang(int ID) {
+        super.addIdBarang(ID);
+    }
+
     public void tampilBarang(){
         int i, n = namaBarang.size();
         for (i=0; i<n; i++){
             System.out.println("+-------------+");
+            System.out.println("ID : " + namaBarang.indexOf(getNamaBarang(i)));
+            addIdBarang(namaBarang.indexOf(getNamaBarang(i)));
             System.out.println("Nama Barang : " +getNamaBarang(i));
             System.out.println("Harga awal : "+getHargaAwal(i));
             System.out.println("Dapat dilelang? : "+getStatus(i));

@@ -12,7 +12,7 @@ public class Petugas extends User{
         System.out.print("Nama Barang : ");
         barang.addNamaBarang();
         System.out.print("Harga Awal Barang : ");
-        barang.addHargaAwal();;
+        barang.addHargaAwal();
         barang.setStatus(true);
     }
 
