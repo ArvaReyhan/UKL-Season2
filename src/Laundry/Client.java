@@ -8,12 +8,12 @@ public class Client implements User{
  private ArrayList<Integer> saldo = new ArrayList<Integer>();
 
  public Client() {
- this.namaClient.add("Inkra");
- this.alamat.add("sawojajar");
+ this.namaClient.add("Seta");
+ this.alamat.add("Jalan jalan");
  this.telepon.add("08123456666");
  this.saldo.add(100000);
 
- this.namaClient.add("Iinn");
+ this.namaClient.add("Pak Jo");
  this.alamat.add("bululawang");
  this.telepon.add("081222233344");
  this.saldo.add(200000);

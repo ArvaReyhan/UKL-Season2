@@ -34,7 +34,7 @@ public class Transaksi {
         int i = 0;
         int temp = 0;
         do {
-            System.out.print("Masukkan kode jenis laundry :");
+            System.out.print("Masukkan kode jenis laundry (masukkan kode 99 untuk berhenti):");
             temp = myObj.nextInt();
             if (temp != 99) {
                 idJenisLaundry.add(temp);
