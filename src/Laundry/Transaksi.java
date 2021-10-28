@@ -26,15 +26,15 @@ public class Transaksi {
     public void prosesTransaksi(Client client, Transaksi transaksi, JenisLaundry jenisLaundry) {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Silahkan Laundry");
-        System.out.println("Masukkan ID Client");
+        System.out.print("Masukkan ID Client : ");
         int idClient = myObj.nextInt();
         System.out.println("Selamat datang " + client.getNama(idClient));
-        ArrayList<Integer> idJenisLaundry = new ArrayList<Integer>();
-        ArrayList<Integer> banyak = new ArrayList<Integer>();
+        //ArrayList<Integer> idJenisLaundry = new ArrayList<Integer>();
+        //ArrayList<Integer> banyak = new ArrayList<Integer>();
         int i = 0;
         int temp = 0;
         do {
-            System.out.println("Masukkan kode jenis laundry :");
+            System.out.print("Masukkan kode jenis laundry :");
             temp = myObj.nextInt();
             if (temp != 99) {
                 idJenisLaundry.add(temp);

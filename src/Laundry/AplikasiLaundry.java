@@ -1,7 +1,6 @@
 package Laundry;
 public class AplikasiLaundry {
     public static void main(String[] args) {
-        // TODO code application logic here
         JenisLaundry jenisLaundry1 = new JenisLaundry();
         Client client1 = new Client();
         Petugas petugas1 = new Petugas();

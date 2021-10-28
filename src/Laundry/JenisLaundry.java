@@ -7,16 +7,17 @@ public class JenisLaundry {
  private ArrayList<Integer> durasi = new ArrayList<Integer>();
 
  public JenisLaundry() {
- this.namaJenisLaundry.add("Cuci Kering Reguler");
- this.durasi.add(3);
- this.harga.add(6000);
- this.namaJenisLaundry.add("Cuci Kering Kilat");
- this.durasi.add(2);
- this.harga.add(7500);
- this.namaJenisLaundry.add("Cuci Kering Express");
- this.durasi.add(1);
- this.harga.add(9000);
+  this.namaJenisLaundry.add("Cuci Kering Reguler");
+  this.durasi.add(3);
+  this.harga.add(6000);
+  this.namaJenisLaundry.add("Cuci Kering Kilat");
+  this.durasi.add(2);
+  this.harga.add(7500);
+  this.namaJenisLaundry.add("Cuci Kering Express");
+  this.durasi.add(1);
+  this.harga.add(9000);
  }
+
  public int getJmlJenisLaundry(){
  return this.namaJenisLaundry.size();
  }
@@ -33,8 +34,9 @@ public class JenisLaundry {
  public int getDurasi(int idJenisLaundry){
  return this.durasi.get(idJenisLaundry);
  }
+
  public void editDurasi(int idJenisLaundry, int durasi){
- this.durasi.set(idJenisLaundry, durasi);;
+  this.durasi.set(idJenisLaundry, durasi);;
  }
  public void setHarga(int harga ){
  this.harga.add(harga);

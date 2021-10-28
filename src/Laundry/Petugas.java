@@ -7,11 +7,12 @@ public class Petugas implements User{
  private ArrayList<Integer> jabatan = new ArrayList<Integer>();
 
  public Petugas() {
- this.namaPetugas.add("admin");
- this.alamat.add("kedung kandang");
- this.telepon.add("081112223333");
- this.jabatan.add(0);
+  this.namaPetugas.add("admin");
+  this.alamat.add("kedung kandang");
+  this.telepon.add("081112223333");
+  this.jabatan.add(0);
  }
+
  public void setJabatan(int jabatan ){
  this.jabatan.add(jabatan);
  }
@@ -21,6 +22,7 @@ public class Petugas implements User{
  public int getJmlPetugas(){
  return this.namaPetugas.size();
  }
+
  @Override
  public void setNama(String namaPetugas ){
  this.namaPetugas.add(namaPetugas);
