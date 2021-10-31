@@ -82,9 +82,9 @@ public class Transaksi {
         return this.banyak.get(id);
     }
 
-    public int getIdClient(int id) {
+    /*public int getIdClient(int id) {
         return this.idClient.get(id);
-    }
+    }*/
 
     public int getJmlTransaksi() {
         return this.idClient.size();
