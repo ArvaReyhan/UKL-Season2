@@ -8,7 +8,7 @@ public class Transaksi {
     private ArrayList<Integer> banyak = new ArrayList<Integer>();
     private ArrayList<Integer> idClient = new ArrayList<Integer>();
 
-    public Transaksi() {
+    /*public Transaksi() {
         this.idClient.add(0);
         this.idJenisLaundry.add(0);
         this.banyak.add(2);
@@ -21,7 +21,7 @@ public class Transaksi {
         this.idClient.add(1);
         this.idJenisLaundry.add(2);
         this.banyak.add(2);
-    }
+    }*/
 
     public void prosesTransaksi(Client client, Transaksi transaksi, JenisLaundry jenisLaundry) {
         Scanner myObj = new Scanner(System.in);
@@ -30,6 +30,8 @@ public class Transaksi {
         int idClient = myObj.nextInt();
         System.out.println("Selamat datang " + client.getNama(idClient));
         //ArrayList<Integer> idJenisLaundry = new ArrayList<Integer>();
+        //idJenisLaundry.clear();
+        //banyak.clear();
         //ArrayList<Integer> banyak = new ArrayList<Integer>();
         int i = 0;
         int temp = 0;

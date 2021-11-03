@@ -9,7 +9,7 @@ public class Laporan {
   System.out.println();
   System.out.println("ID \tNama Jenis Laundry \tDurasi(hr) \tHarga/kg");
   for (int i = 0; i < x; i++) {
-   System.out.println(i +"\t"+ jenisLaundry.getNamaJenisLaundry(i)+"\t"+
+   System.out.println((i+1) +"\t"+ jenisLaundry.getNamaJenisLaundry(i)+"\t"+
            jenisLaundry.getDurasi(i)+ "hr" + "\t" +"\t"+jenisLaundry.getHarga(i) + "/kg");
   }
  }
@@ -41,7 +41,7 @@ public class Laporan {
    int jumlah=transaksi.getBanyaknya(i)*jenisLaundry.getHarga(transaksi.getIdJenisLaundry(i));
    total+=jumlah;
 
-   System.out.println(i + "\t" + jenisLaundry.getNamaJenisLaundry(transaksi.getIdJenisLaundry(i))+"\t"+
+   System.out.println((i+1) + "\t" + jenisLaundry.getNamaJenisLaundry(transaksi.getIdJenisLaundry(i))+"\t"+
            transaksi.getBanyaknya(i)+ "kg"+ "\t" +"\t"+jenisLaundry.getHarga(transaksi.getIdJenisLaundry(i))+ "/kg" + "\t" + "\t"
            + jumlah);
   }

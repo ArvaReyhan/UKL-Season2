@@ -6,15 +6,16 @@ public class AplikasiLaundry {
         Petugas petugas1 = new Petugas();
         Transaksi transaksiLaundry = new Transaksi();
         Laporan laporanLaundry = new Laporan();
-        
-        laporanLaundry.laporan(daftarJenisLaundry);
+
         laporanLaundry.laporan(daftarClient);
-        laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
+        laporanLaundry.laporan(daftarJenisLaundry);
+
+        //laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
         
         transaksiLaundry.prosesTransaksi(daftarClient, transaksiLaundry, daftarJenisLaundry);
         
-        laporanLaundry.laporan(daftarJenisLaundry);
-        laporanLaundry.laporan(daftarClient);
+       // laporanLaundry.laporan(daftarJenisLaundry);
+        // laporanLaundry.laporan(daftarClient);
         laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
         
         
