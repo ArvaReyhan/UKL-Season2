@@ -1,10 +1,10 @@
 package Laundry;
 public interface User {
-    public void setNama(String nama);
-    public void setAlamat(String alamat);
-    public void setTelepon(String telepon);
+    void setNama(String nama);
+    void setAlamat(String alamat);
+    void setTelepon(String telepon);
     
-    public String getNama(int id);
-    public String getAlamat(int id);
-    public String getTelepon(int id);
+    String getNama(int id);
+    String getAlamat(int id);
+    String getTelepon(int id);
 }

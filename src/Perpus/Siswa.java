@@ -7,7 +7,9 @@ package Perpus;
  */
 public class Siswa {
     private int idSiswa;
-    private String nama, alamat, telepon;
+    private String nama;
+    private String alamat;
+    private String telepon;
     boolean status;
 
     public Siswa(int idSiswa, String nama, String alamat, String telepon, boolean status) {

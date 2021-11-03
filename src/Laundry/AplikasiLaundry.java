@@ -9,13 +9,9 @@ public class AplikasiLaundry {
 
         laporanLaundry.laporan(daftarClient);
         laporanLaundry.laporan(daftarJenisLaundry);
-
-        //laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
-        
+        System.out.println();//jarak
         transaksiLaundry.prosesTransaksi(daftarClient, transaksiLaundry, daftarJenisLaundry);
-        
-       // laporanLaundry.laporan(daftarJenisLaundry);
-        // laporanLaundry.laporan(daftarClient);
+        System.out.println();//jarak
         laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
         
         

@@ -29,7 +29,7 @@ public class Member implements User{
         return this.saldo.get(idMember);
     }
     public void editSaldo(int idMember, int saldo){
-        this.saldo.set(idMember, saldo);;
+        this.saldo.set(idMember, saldo);
     }
     public int getJmlMember(){
         return this.saldo.size();

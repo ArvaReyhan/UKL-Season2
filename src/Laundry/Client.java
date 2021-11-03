@@ -25,7 +25,7 @@ public class Client implements User{
  return this.saldo.get(idClient);
  }
  public void editSaldo(int idClient, int saldo){
- this.saldo.set(idClient, saldo);;
+ this.saldo.set(idClient, saldo);
  }
  public int getJmlClient(){
  return this.saldo.size();

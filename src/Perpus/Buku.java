@@ -1,7 +1,8 @@
 package Perpus;
 
 public class Buku {
-    private int idBuku, stok;
+    private int idBuku;
+    private int stok;
     private String judulBuku;
 
     public Buku(int idBuku, String judulBuku, int stok) {

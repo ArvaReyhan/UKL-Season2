@@ -36,7 +36,7 @@ public class JenisLaundry {
  }
 
  public void editDurasi(int idJenisLaundry, int durasi){
-  this.durasi.set(idJenisLaundry, durasi);;
+  this.durasi.set(idJenisLaundry, durasi);
  }
  public void setHarga(int harga ){
  this.harga.add(harga);
