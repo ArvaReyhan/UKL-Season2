@@ -7,15 +7,17 @@ public class JenisLaundry {
  private ArrayList<Integer> durasi = new ArrayList<Integer>();
 
  public JenisLaundry() {
-  this.namaJenisLaundry.add("Cuci Kering Reguler");
-  this.durasi.add(3);
-  this.harga.add(6000);
-  this.namaJenisLaundry.add("Cuci Kering Kilat");
-  this.durasi.add(2);
-  this.harga.add(7500);
-  this.namaJenisLaundry.add("Cuci Kering Express");
-  this.durasi.add(1);
-  this.harga.add(9000);
+  setNamaJenisLaundry("Cuci Kering Reguler");
+  setDurasi(3);
+  setHarga(6000);
+
+  setNamaJenisLaundry("Cuci Kering Kilat");
+  setDurasi(2);
+  setHarga(7500);
+
+  setNamaJenisLaundry("Cuci Kering Express");
+  setDurasi(1);
+  setHarga(9000);
  }
 
  public int getJmlJenisLaundry(){

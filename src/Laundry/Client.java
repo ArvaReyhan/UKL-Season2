@@ -8,15 +8,15 @@ public class Client implements User{
  private ArrayList<Integer> saldo = new ArrayList<Integer>();
 
  public Client() {
- this.namaClient.add("Seta");
- this.alamat.add("Jalan jalan");
- this.telepon.add("08123456666");
- this.saldo.add(100000);
+ setNama("Seta");
+ setAlamat("Jalan jalan");
+ setTelepon("08123456666");
+ setSaldo(100000);
 
- this.namaClient.add("Pak Jo");
- this.alamat.add("bululawang");
- this.telepon.add("081222233344");
- this.saldo.add(200000);
+ setNama("Pak Jo");
+ setAlamat("bululawang");
+ setAlamat("081222233344");
+ setSaldo(200000);
  }
  public void setSaldo(int saldo){
  this.saldo.add(saldo);
