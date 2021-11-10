@@ -2,7 +2,7 @@ package Laundry;
 public class AplikasiLaundry {
     static JenisLaundry daftarJenisLaundry = new JenisLaundry();
     static Client daftarClient = new Client();
-    static Petugas petugas1 = new Petugas();
+    static Petugas penjagaToko = new Petugas();
     static Transaksi transaksiLaundry = new Transaksi();
     static Laporan laporanLaundry = new Laporan();
     public static void main(String[] args) {
@@ -11,6 +11,7 @@ public class AplikasiLaundry {
         System.out.println();//jarak
         transaksiLaundry.prosesTransaksi(daftarClient, transaksiLaundry, daftarJenisLaundry);
         System.out.println();//jarak
+        laporanLaundry.laporan(penjagaToko);
         laporanLaundry.laporan(transaksiLaundry, daftarJenisLaundry);
     }
 }

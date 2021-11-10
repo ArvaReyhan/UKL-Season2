@@ -1,6 +1,13 @@
 package Laundry;
 public class Laporan {
 
+ public void laporan(Petugas petugas){
+  System.out.println("Nama Petugas : " + petugas.getNama(0));
+  System.out.println("Telp : " + petugas.getTelepon(0));
+  String jabatan = (petugas.getJabatan(0) == 0)? "Owner" : "Pegawai";
+  System.out.println("Status : " + jabatan);
+ }
+
  public void laporan(JenisLaundry jenisLaundry){
   int x=jenisLaundry.getJmlJenisLaundry();
 
@@ -9,7 +16,7 @@ public class Laporan {
   System.out.println();
   System.out.println("ID \tNama Jenis Laundry \tDurasi(hr) \tHarga/kg");
   for (int i = 0; i < x; i++) {
-   System.out.println((i+1) +"\t"+ jenisLaundry.getNamaJenisLaundry(i)+"\t"+
+   System.out.println(i +"\t"+ jenisLaundry.getNamaJenisLaundry(i)+"\t"+
            jenisLaundry.getDurasi(i)+ "hr" + "\t" +"\t"+jenisLaundry.getHarga(i) + "/kg");
   }
  }

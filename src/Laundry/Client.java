@@ -16,6 +16,7 @@ public class Client implements User{
  setNama("Pak Jo");
  setAlamat("bululawang");
  setAlamat("081222233344");
+ setTelepon("123562343094");
  setSaldo(200000);
  }
  public void setSaldo(int saldo){

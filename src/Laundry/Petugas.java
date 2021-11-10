@@ -7,10 +7,10 @@ public class Petugas implements User{
  private ArrayList<Integer> jabatan = new ArrayList<Integer>();
 
  public Petugas() {
-  this.namaPetugas.add("admin");
-  this.alamat.add("kedung kandang");
-  this.telepon.add("081112223333");
-  this.jabatan.add(0);
+  setNama("Pak Bur");
+  setAlamat("kedung kandang");
+  setTelepon("081112223333");
+  setJabatan(0);
  }
 
  public void setJabatan(int jabatan ){
@@ -34,7 +34,7 @@ public class Petugas implements User{
  }
  @Override
  public void setTelepon(String telepon ){
- this.namaPetugas.add(telepon);
+ this.telepon.add(telepon);
  }
 
  @Override
