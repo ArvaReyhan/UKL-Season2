@@ -30,5 +30,8 @@ public class Buku {
     public void kurangiStok(){
         this.stok--;
     }
+    public void tambahStock(){
+        this.stok++;
+    }
     
 }
