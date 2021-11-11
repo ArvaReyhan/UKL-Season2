@@ -14,7 +14,7 @@ public class Client implements User{
  setSaldo(100000);
 
  setNama("Pak Jo");
- setAlamat("bululawang");
+ setAlamat("Jalan jalan");
  setAlamat("081222233344");
  setTelepon("123562343094");
  setSaldo(200000);

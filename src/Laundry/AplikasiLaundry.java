@@ -7,6 +7,7 @@ public class AplikasiLaundry {
     static Laporan laporanLaundry = new Laporan();
     public static void main(String[] args) {
         laporanLaundry.laporan(daftarClient);
+        System.out.println();//jarak
         laporanLaundry.laporan(daftarJenisLaundry);
         System.out.println();//jarak
         transaksiLaundry.prosesTransaksi(daftarClient, transaksiLaundry, daftarJenisLaundry);

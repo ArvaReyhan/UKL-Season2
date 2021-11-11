@@ -46,6 +46,10 @@ public class Transaksi {
         }
 
         System.out.println("Total Laundry : " + total);
+        if(total > client.getSaldo(idClient)){
+            System.out.println("Maaf Saldo anda tidak mencukupi");
+            System.exit(0);
+        }
         client.editSaldo(idClient, client.getSaldo(idClient) - total);
         System.out.println("Sisa Saldo " +  client.getNama(idClient) + " = "+  client.getSaldo(idClient));
     }
